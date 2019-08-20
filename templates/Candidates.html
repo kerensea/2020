@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block body %}
+<br>
+<h1 id="Meet"><center>Meet your candidates<center></h1>
+  <center>
+
+
+  <div class='portraits'>
+  <a href="{{ url_for('Warren') }}">
+  <img alt= "Elizabeth Warren" src="{{ url_for('static', filename='warren(twitter).jpg')}}" width="375" height="375" style="padding-bottom:0.5em;">
+  </a>
+  <div>
+    <a href="{{ url_for('Warren') }}">Elizabeth Warren</a><br />
+    </div>
+  </div>
+
+  <div class='portraits'>
+  <a href="{{ url_for('Harris') }}">
+  <img alt= "Kamala Harris" src="{{ url_for('static', filename='harris(twitter).jpg')}}" width="375" height="375" style="padding-bottom:0.5em;">
+  </a>
+  <div>
+    <a href="{{ url_for('Harris') }}">Kamala Harris</a><br />
+    </div>
+  </div>
+
+  <div class='portraits'>
+  <a href="{{ url_for('Buttigieg') }}">
+  <img alt= "Pete Buttigieg" src="{{ url_for('static', filename='pete(Twitter).png')}}" width="375" height="375" style="padding-bottom:0.5em;">
+  </a>
+  <div>
+    <a href="{{ url_for('Buttigieg') }}">Pete Buttigieg</a><br />
+    </div>
+  </div>
+</div>
+<div class="allCandi">
+<div class='portraits'>
+<a href="{{ url_for('donald_trump') }}">
+<img alt= "Donald Trump" src="{{ url_for('static', filename='trump(wikipedia).jpg')}}" width="375" height="375" style="padding-bottom:0.5em;">
+</a>
+<div>
+  <a href="{{ url_for('donald_trump') }}">Donald Trump</a><br />
+  </div>
+</div>
+
+<div class='portraits'>
+<a href="{{ url_for('Biden') }}">
+<img alt= "Joe Biden" src="{{ url_for('static', filename='biden(biography.com).jpg')}}" width="375" height="375" style="padding-bottom:0.5em;">
+</a>
+<div>
+  <a href="{{ url_for('Biden') }}">Joe Biden</a><br />
+  </div>
+</div>
+
+<div class='portraits'>
+<a href="{{ url_for('Sanders') }}">
+<img alt= "Bernie Sanders" src="{{ url_for('static', filename='sanders(twitter).png')}}" width="375" height="375" style="padding-bottom:0.5em;">
+</a>
+<div>
+  <a href="{{ url_for('Sanders') }}">Bernie Sanders</a><br />
+  </div>
+</div>
+<br>
+
+</center>
+{% endblock %}

@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html>
+  <head>
+    <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <center>
+      <a href="{{ url_for('home') }}">
+      <img alt= "Vote2020" src="{{ url_for('static', filename='2020(columbusDispatch).png')}}" width="520" height="133.3" style="padding-bottom:0.5em;">
+      </a>
+      </center>
+
+      <a href="{{ url_for('home') }}">
+      <img alt= "Home" src="{{ url_for('static', filename='home.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <a href="{{ url_for('candi') }}">
+      <img alt= "Candidates" src="{{ url_for('static', filename='candidates.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <a href="{{ url_for('where') }}">
+      <img alt= "Where" src="{{ url_for('static', filename='where.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <a href="{{ url_for('proposal') }}">
+      <img alt= "Proposal" src="{{ url_for('static', filename='proposal.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <a href="{{ url_for('quiz') }}">
+      <img alt= "Quiz" src="{{ url_for('static', filename='quiz.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <a href="{{ url_for('aboutUs') }}">
+      <img alt= "About Us" src="{{ url_for('static', filename='aboutUs.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <a href="{{ url_for('credit') }}">
+      <img alt= "Credit" src="{{ url_for('static', filename='credit.jpg')}}" width="171.43" height="64" style="padding-bottom:0.5em;">
+      </a>
+
+      <br>
+      <br>
+
+
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block head %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+<link rel="stylesheet" href="style.css"></link>
+<!-- <script src="main.js"></script> -->
+{% endblock %}
+
+{% block body %}
+
+<div class = "collage">
+<br>
+<h1 id="Where" style="color:blue;"><center>Where To Vote<center></h1>
+  <div class = "voter-search">
+  <div class = "row">
+    <center><input style="width:315px; height:30px;""type = "text" class = "form-control" placeholder="Enter your address to find the nearest polling station." id = "address">
+    <center><button type="button" id="address-search">Let's Vote!</button></center>
+  </div>
+  <div style="color:black;" class="voter-result" id="search-result">
+  </div>
+  </div>
+<p>
+  <center>
+  (By the way, this won't work until the 2020 presidential election has officially started in November of 2020)
+  </center>
+</p>
+  <div>
+    <center>
+    <a href="https://www.vote.org/am-i-registered-to-vote/">
+    <img alt= "Question Mark" src="{{ url_for('static', filename='CIVHC.png')}}" width="200" height="200" style="padding-bottom:0.5em;">
+    <br>
+    Check if you are registered to vote!
+    </center>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div>
+    <center>
+
+      <div id="check">
+        <a href="https://www.vote.org/register-to-vote/">
+        <img alt= "Check Mark" src="{{ url_for('static', filename='download.png')}}" width="200" height="200" style="padding-bottom:0.5em;">
+      </div>
+      <div>
+        Register Now!
+      </div>
+    </center>
+  </div>
+  </div>
+<br>
+<br>
+<br>
+<script>
+  $( document ).ready(function() {
+  $("#address-search").on( "click", function() {
+    var encodedaddress = encodeURIComponent($("#address").val());
+    $.getJSON( "https://www.googleapis.com/civicinfo/v2/voterinfo?address="+encodedaddress+"{{API_KEY}}",
+    function( json ) {
+      var name  = json.pollingLocations[0].address.locationName;
+      var street  = json.pollingLocations[0].address.line1;
+      var city  = json.pollingLocations[0].address.city;
+      var state  = json.pollingLocations[0].address.state;
+      var zip  = json.pollingLocations[0].address.zip;
+      var hours  = json.pollingLocations[0].pollingHours;
+      $("#search-result").text(name + " " + street + " " +  city + " " + state + " " +  zip + " " +  hours);
+   });
+  });
+  });
+
+</script>
+
+{% endblock %}

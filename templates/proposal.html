@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body %}
+
+<h1 class="blue"> <center>Our Proposal For Fighting Voter Suppression<center> </h1>
+<div>
+<span><img id="vote" alt= "Voter supression picture" src="{{ url_for('static', filename='vs.jpg')}}" width="480" height="270" style="padding-bottom:0.5em;"></span>
+</div>
+<div>
+<h2 class="red"> What is voter supression? </h2>
+<h3><a href=https://www.demandthevote.com/what-is-voter-suppression>‘Demand the Vote’</a> defines voter suppression as “any effort, either legal or illegal, by way of laws, administrative rules, and/or tactics that prevent eligible voters from registering to vote or voting.” Voter suppression is exemplified through the following:<br>
+<ul><li>Forcing racist and discriminatory voter photo-ID and citizenship identification checks</li>
+<li>Eliminating voter opportunities by reducing the hours at polling stations in communities of color</li></ul>
+
+<h2 class="blue">Who is affected by voter suppression?</h2>
+<h3>Voter suppression most commonly targets black voters and other communities of color. <a href=https://www.aclu.org/issues/voting-rights/fighting-voter-suppression>The American Civil Liberties Union</a> writes
+   that “since 2008, states across the country have passed measures to make it harder for Americans—particularly black people,
+   the elderly, students, and people with disabilities—to exercise their fundamental right to cast a ballot.”</h3>
+
+<h2 class="red">Who benefits from voter suppression?</h2>
+<h3>Republicans. It is clear that voter suppression laws and tactics benefits those who propose them -- Republic federal and
+  state lawmakers. </h3>
+</div>
+<h2 class="blue"><center>OUR PROPOSAL<center></h2>
+<h3>National Voting Day (a red, white and blue holiday)! In order to increase voter turnout and reduce voter suppression, we
+  propose a national holiday to ensure all people regardless of their skin color, socioeconomic status, and ability have the
+  opportunity to exercise their right to vote.</h3>
+
+<center><img alt= "SWOT Analysis" src="{{ url_for('static', filename='SWOT.PNG')}}" width="709.5" height="321" style="padding-bottom:0.5em;"><center>
+{% endblock %}
